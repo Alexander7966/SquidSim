@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Squid Game Simulation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>SquidSIM</h1>
+  <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+  <div id="statsPanel">
+    <h2>Player Stats</h2>
+    <div id="playerList"></div>
+  </div>
+
+  <div id="profileModal" class="hidden">
+    <div class="modal-content">
+      <h2 id="profileName"></h2>
+      <pre id="profileStats"></pre>
+      <button onclick="closeProfile()">Close</button>
+    </div>
+  </div>
+
+  <button onclick="startSimulation()">Start Simulation</button>
+  <button onclick="location.reload()">Replay Simulation</button>
+  <button onclick="saveSimulation()">Save</button>
+  <button onclick="loadSimulation()">Load</button>
+
+  <div id="leaderboard" class="hidden">
+    <h2>🏅 Final Leaderboard</h2>
+    <ul id="leaderboardList"></ul>
+  </div>
+
+  <script src="simulation.js"></script>
+</body>
+</html>
